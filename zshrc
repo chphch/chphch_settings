@@ -29,10 +29,10 @@ ZSH_THEME="agnoster"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -85,11 +85,42 @@ source $ZSH/oh-my-zsh.sh
 
 #==============CUSTOMIZED=====================
 
+# safe rm
+alias rm="rm -i"
+
+# zsh
+alias zrc="vi ~/.zshrc"
+alias szrc="source ~/.zshrc"
+
+# vimrc
+alias vrc="vi ~/.vimrc"
+
+# linux default commands
+alias clr=clear
+
 # Added by Anaconda3 4.4.0 installer
 export PATH="/Users/macbook/anaconda/bin:$PATH"
 
 # default terminal prompt
 prompt_context () { }
 
-# ALIAS
+# Ruby On Rails
 alias rr="rake db:drop; rake db:migrate; rake db:seed"
+
+# git
+alias gs="git status"
+alias gad="git add"
+alias gl="git log --graph --pretty"
+alias gck="git checkout"
+alias gcm="git commit -m"
+alias gp="git push -u origin"
+alias gdf="git diff"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/macbook/Downloads/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/macbook/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/macbook/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/macbook/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
